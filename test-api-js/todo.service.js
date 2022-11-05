@@ -26,6 +26,7 @@ class todoservice{
         // Your code here
         this.todo_data.todo.push(todo);
         console.log(this.todo_data.todo);
+        return this.todos;
     }
 
     delete_todo(id){
@@ -33,6 +34,7 @@ class todoservice{
         this.todo_data.todo.splice(id-1,1)
         console.log("Deleting element ");
         console.log(this.todo_data.todo);
+        return this.todos;
     }
 
     update_todo(id, todo){
@@ -40,6 +42,7 @@ class todoservice{
         this.todo_data.todo[id-1] = todo;
         console.log("Updating element ");
         console.log(this.todo_data.todo);
+        return this.todos;
     }
 }
 
