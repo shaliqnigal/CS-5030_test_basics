@@ -33,5 +33,11 @@ describe('todo test suite', () => {
         expect(todo_service.delete_todo(4).todo.length).toEqual(3);
     });
 
+    // Test to check if the to do item is updated in the right index
+    test("update_todos", () => {
+        let result = todo_service.update_todo(1,{"title":"T2","description":"D2-updated","done":true})
+        //console.log(result.todo[0]);
+        expect(result.todo[0]).toEqual({ title: 'T2', description: 'D2-updated', done: true });
+    });
 
 });
